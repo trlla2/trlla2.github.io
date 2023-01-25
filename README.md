@@ -6,10 +6,10 @@ vamos a hablar de markdown
 
 aqui almacenaremos la web estatica, tambien ejemplos de markdown css javascript etc
 
-dos **asteriscos** significa bolt.
+-dos **asteriscos** significa bolt.
 
-Un *asterisco* significa ITALIC.
+-Un *asterisco* significa ITALIC.
 
-un _guion bajo_ significa tambien ITALIC.
+-un _guion bajo_ significa tambien ITALIC.
 
-para ***bolt italic*** tres asteriscos.
+-para ***bolt italic*** tres asteriscos.
