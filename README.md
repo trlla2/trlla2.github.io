@@ -13,3 +13,11 @@ aqui almacenaremos la web estatica, tambien ejemplos de markdown css javascript 
 - un _guion bajo_ significa tambien ITALIC.
 
 - para ***bolt italic*** tres asteriscos.
+
+
+## ejemplos de lista de tareas
+
+- [] Aprender HTML
+- [] Aprender CCS
+- [] Aprender JS
+- [x] Aprender MySQL
