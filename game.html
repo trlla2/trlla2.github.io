@@ -7,7 +7,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
 <script>
-fetch("https://rafaenti.github.io/game.json").then(response => response.json()).then(data => console.log(data));
+function game(data){
+	console.log(data.rooms[0].name);
+}
+fetch("https://rafaenti.github.io/game.json").then(response => response.json()).then(data => game(data));
 </script>
 </head>
 <body>
