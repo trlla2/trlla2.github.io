@@ -10,7 +10,7 @@
 	{"id":"piedra", 
 	"name":"predusco morgoso",
 	"description":"Es una piedra sucia",
-	"pickeable":true}
+	"pickeable":true},
 	
 	{"id":"bicicleta", 
 	"name":"bicicleta morgoso",
