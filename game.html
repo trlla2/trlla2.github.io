@@ -21,6 +21,7 @@ function game(data){
 	
 	console.log(data.rooms[0].name);
 }
+function 
 fetch("https://rafaenti.github.io/game.json").then(response => response.json()).then(data => game(data));
 </script>
 </head>
@@ -44,7 +45,7 @@ fetch("https://rafaenti.github.io/game.json").then(response => response.json()).
 <div id="terminal">
 </div>
 <input type="text" id="comands"/>
-<input type="submit" value="Accion"/>
+<input type="submit" value="Accion" onclick="(); return false;" />
 </form>
 </article>
 <aside>	
