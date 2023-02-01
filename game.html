@@ -23,6 +23,8 @@ function game(data){
 }
 function readAction(){
 	let command = document.getElementById("commands").value;
+	
+	let data = command.split(" ");
 }
 fetch("https://trlla2.github.io/game.json").then(response => response.json()).then(data => game(data));
 </script>
