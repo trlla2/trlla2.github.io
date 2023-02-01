@@ -21,7 +21,9 @@ function game(data){
 	
 	console.log(data.rooms[0].name);
 }
-function 
+function readAction(){
+	let command = document.getElementById("commands").value;
+}
 fetch("https://trlla2.github.io/game.json").then(response => response.json()).then(data => game(data));
 </script>
 </head>
@@ -44,7 +46,7 @@ fetch("https://trlla2.github.io/game.json").then(response => response.json()).th
 <form>
 <div id="terminal">
 </div>
-<input type="text" id="comands"/>
+<input type="text" id="commands"/>
 <input type="submit" value="Accion" onclick="readAction(); return false;" />
 </form>
 </article>
