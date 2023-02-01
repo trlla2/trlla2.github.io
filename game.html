@@ -25,8 +25,15 @@ function readAction(){
 	let command = document.getElementById("commands").value;
 	
 	let data = command.split(" ");
+	
+	if ( data.lenght == 1){
+		
+	}
+	else if ( data.lebght == 2){
+		
+	}
 }
-fetch("https://trlla2.github.io/game.json").then(response => response.json()).then(data => game(data));
+fetch("https://rafaenti.github.io/game.json").then(response => response.json()).then(data => game(data));
 </script>
 </head>
 <body>
