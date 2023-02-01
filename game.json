@@ -22,7 +22,7 @@
 	"name":"lavabo",
 	"description":"donde pipi caca",
 	"items":["papelWC"],
-	"doors":"WC"}
+	"doors":"WC"},
 	
 	{"id":"02",
 	"name":"clase 02",
