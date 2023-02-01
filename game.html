@@ -43,7 +43,12 @@ function parseCommand(command){
 	}
 }
 function paseInstruction(command){
-	
+	switch(command[0]){
+		case "ir":
+			game_data.rooms[currnet_room]=command[1];
+			
+		break;
+	}
 }
 function readAction(){
 	let command = document.getElementById("commands").value;
