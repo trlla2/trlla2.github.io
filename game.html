@@ -26,12 +26,18 @@ function readAction(){
 	
 	let data = command.split(" ");
 	
+	if (data.lenght = 0) {
+		document.getElementById("terminal").innerHTML += "<strong>ERROR</strong> Escribe un comando correcto";
+		return;
+	}
+	
 	if ( data.lenght == 1){
-		
+		parseCommand(data[0]);
 	}
-	else if ( data.lebght == 2){
-		
+	else
+		paseInstruction(data);
 	}
+	
 }
 fetch("https://rafaenti.github.io/game.json").then(response => response.json()).then(data => game(data));
 </script>
