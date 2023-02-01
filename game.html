@@ -23,6 +23,8 @@ function game(data){
 }
 function terminal_out(info){
 	document.getElementById("terminal").innerHTML += info; 
+	terminal.innnerHTML += info;
+	terminal:scrollTop = terminal.scrollHeight;
 }
 function parseCommand(command){
 	switch (command){
@@ -30,7 +32,12 @@ function parseCommand(command){
 		terminal_out(game_data.rooms[current_room].description);
 		break;
 		case "ir":
-		
+		let doors = "";
+		let doors_num = game_data.rooms[current_room].dors.lenght;
+		for (let i = 0; i < doors_num;i++){
+		 doors += game_data.rooms[current_room].doors[i]+", ";
+		}
+		terminal_out("<p>Puedes ir a: "+ doors +"</p>");
 		break;
 		deafult:
 	}
