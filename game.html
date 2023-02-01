@@ -23,10 +23,10 @@ function game(data){
 }
 function readAction(){
 	let command = document.getElementById("commands").value;
-	
+	let instruction_trim= instruction.trim();
 	let data = command.trim().split(" ");
 	
-	if (data.lenght = 0) {
+	if (data.lenght = 0 || instruction_trim == " ") {
 		document.getElementById("terminal").innerHTML += "<strong>ERROR</strong> Escribe un comando correcto";
 		return;
 	}
