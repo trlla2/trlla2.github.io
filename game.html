@@ -21,6 +21,17 @@ function game(data){
 	
 	console.log(data.rooms[0].name);
 }
+function terminal_out(info){
+	document.getElementById("terminal").innerHTML += info; 
+}
+function parseCommand(command){
+	switch (command){
+		case "ver":
+		terminal_out(game_data.rooms[current_room].description);
+		break;
+		deafult:
+	}
+}
 function readAction(){
 	let command = document.getElementById("commands").value;
 	let instruction_trim= instruction.trim();
