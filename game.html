@@ -40,14 +40,52 @@ function parseCommand(command){
 		terminal_out("<p>Puedes ir a: "+ doors +"</p>");
 		break;
 		deafult:
+		terminal_out("<p><strong>ERROR</strong> escribe bien la instruction</p>");
 	}
 }
-function paseInstruction(command){
-	switch(command[0]){
+function getDoorNumber(door){
+	for (let i = 0; i < game_data.doors.lenght; i++){
+		if (game_data.doors[i].id == door){
+		return i;
+		}
+	}
+	return -1;
+}
+function getRoomNumber(room){
+	for (let i = 0; i < game_data.rooms.lenght; i++){
+		if (game_data.rooms[i].id == room){
+		return i;
+		}
+	}
+	return -1;
+
+}
+function paseInstruction(instruction){
+	switch(instruction[0]){
+		case"ver":
+		
+		break;
 		case "ir":
-			game_data.rooms[currnet_room]=command[1];
+			getDoorNumber(instruction[1]);
+			if(door_num < 0){
+				console.log("Puerta erronia");
+			}
+			let room_num = getRoomNumber(game_data.doors[door_num].rooms[0]);
+			if (room_num == current_room){
+				current_room = getRoomNumber(game_data.doors[door_num].rooms[1]);
+			}
+			else{
+				current_room = room_num;
+			}
+			//getRoomNumber(HABITACIoN);
 			
 		break;
+		case"coger":
+		
+		
+		break;
+		deafult:
+		terminal_out("<p><strong>ERROR</strong> escribe bien la instruction</p>");
 	}
 }
 function readAction(){
