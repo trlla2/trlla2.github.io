@@ -84,6 +84,9 @@ function paseInstruction(instruction){
 		
 		
 		break;
+		case"ver":
+		terminal_out(game_data.items[instruction[1]].description);
+		break;
 		deafult:
 		terminal_out("<p><strong>ERROR</strong> escribe bien la instruction</p>");
 	}
