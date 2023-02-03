@@ -84,6 +84,15 @@ function paseInstruction(instruction){
 		game_data.rooms[current_room].items.forEach(function(item){
 			if (items == instruction[1]){
 				items_picked.push(item);
+				let item_num = game_data.rooms[current_room].items.indexOf(items);
+				if(item_num < 0){
+					console.log("Error al borrar el item de la habitacion");
+					return;
+				}
+				
+				game_data.rooms[current_room]items.splice(items_num,1);
+				
+				return;
 			}
 		});
 		
