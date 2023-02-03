@@ -81,7 +81,11 @@ function paseInstruction(instruction){
 			
 		break;
 		case"coger":
-		
+		game_data.rooms[current_room].items.forEach(function(item){
+			if (items == instruction[1]){
+				items_picked.push(item);
+			}
+		});
 		
 		break;
 		case"ver":
