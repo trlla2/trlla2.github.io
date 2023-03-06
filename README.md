@@ -21,3 +21,10 @@ aqui almacenaremos la web estatica, tambien ejemplos de markdown css javascript 
 - [] Aprender CCS
 - [] Aprender JS
 - [x] Aprender MySQL
+
+## Preguntas del ejercicio final
+- ¿Qué es HTML? ¿CSS? ¿Javascript?
+
+- ¿Qué es el formato Markdown?
+
+- ¿Qué es el formato JSON? ¿Cómo se convierte un objeto a JSON? ¿Y JSON a un objeto?
