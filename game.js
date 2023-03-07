@@ -1,3 +1,4 @@
+
 let game_data;
 
 let current_room=0;
@@ -12,9 +13,11 @@ function game(data){
 	console.log(data.rooms[0].name);
 }
 function terminal_out(info){
-	document.getElementById("terminal").innerHTML += info; 
+	let terminal = document.getElementById("terminal"); 
+	
 	terminal.innnerHTML += info;
-	terminal:scrollTop = terminal.scrollHeight;
+	
+	terminal.scrollTop = terminal.scrollHeight;
 }
 function parseCommand(command){
 	switch (command){
