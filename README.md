@@ -32,3 +32,4 @@ El formato Markdown (formato que se utiliza para los readme de github como este)
 - ¿Qué es el formato JSON? ¿Cómo se convierte un objeto a JSON? ¿Y JSON a un objeto?
 El formato JSON es un formato para la tranferecia de datos que se presento como alternativa a XML.
 Para transformar un objeto a JSON utilizando javascript se necesita el comando JSON.stringify. ejemplo: JSON.stringify({ x: 5})
+Para transformar JSON a un objeto javascript se utiiza el comando JSON.parse. ejemplo: JSON.parse(text[, reviver])
