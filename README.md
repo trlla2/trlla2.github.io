@@ -24,7 +24,11 @@ aqui almacenaremos la web estatica, tambien ejemplos de markdown css javascript 
 
 ## Preguntas del ejercicio final
 - ¿Qué es HTML? ¿CSS? ¿Javascript?
-
+Html es un lenguaje de hipertexto que se utiliza para escribir el contenido de una pagina web.
+CCS es un lenguaje de estilos en cascada que se utiliza para la estroctura, compocicion y decoracion de las paginas web html o jsx.
+javascript es un lenguaje de programacion de scripting interpretado a tiempo, se suele utilizar como lenguaje para programar en paginas web pero tiene otros usos como programacion en base de datos(node.js)... 
 - ¿Qué es el formato Markdown?
-
+El formato Markdown (formato que se utiliza para los readme de github como este) es un lenguaje que se utiliza para hacer texto enriquecido.
 - ¿Qué es el formato JSON? ¿Cómo se convierte un objeto a JSON? ¿Y JSON a un objeto?
+El formato JSON es un formato para la tranferecia de datos que se presento como alternativa a XML.
+Para transformar un objeto a JSON utilizando javascript se necesita el comando JSON.stringify. ejemplo: JSON.stringify({ x: 5})
