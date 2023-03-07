@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Pagina de prueba</title>
-<link rel="stylesheet" href="base.css">
-<link rel="stylesheet" href="game.css">
+<title>Pagina de ENTI, Roc Allue</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="game.css">
+
 <script type="text/javascript" src="game.js"></script>
+
 </head>
 <body>
+
 <header>
 <h1>Roc Allue, pagina de ENTI</h1>
 <nav>
-<ul>
+<ul id="main-menu">
 <li id="menu-presentation"><a href="index.html">Presentacion</a></li>
 <li id="menu-hobbies"><a href="hobbies.html">Hobbies</a></li>
 <li id="menu-contact"><a href="contact.html">Contacto</a></li>
@@ -22,24 +27,30 @@
 </ul>
 </nav>
 </header>
+
 <main>
+
 <article>
-<h2>articulo</h2>
+<h2>Entierrame</h2>
+
 <form>
-<div id="terminal">
-</div>
+<div id="terminal"></div>
 <input type="text" id="commands"/>
 <input type="submit" value="Accion" onclick="readAction(); return false;" />
 </form>
 </article>
+
 <aside>	
 <h2>aside</h2>
+<p> este es el menu lateral</p>
 </aside>
+
 </main>
+
 <footer>
 <p> Roc Allue Canut (c) <span id="footer-year">2022</span></p>
 <script>
-document.getElementById("footer-year").innerHTML = new Date().getFullYear();
+	document.getElementById("footer-year").innerHTML = new Date().getFullYear();
 </script>
 </footer>
 </body>
