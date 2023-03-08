@@ -40,6 +40,7 @@ function getItemNumber (item){
 			return i;
 		}
 	}
+	//?
 	
 	return -1;
 }
@@ -58,7 +59,7 @@ function executeCommand () {
 		parseCommand(command[0]);
 	}
 	else {
-		parseInstruction(command);
+		parseInstruction(command);//?
 	}
 }
 
@@ -98,7 +99,17 @@ function parseCommand(command){
 			}
 			terminal_out("<p>Puedes ir a: "+ doors +"</p>");
 			break;
-			//cogerP?
+		case "coger":
+			
+			let items = "";
+			let items_num = game_data.rooms[current_room].items.length;
+			for(let i = 0; i < items_num; i++){
+				items += game_data.rooms[current_room].items[i] + " ";
+			}
+			
+			terminalOut("<p>En esta sala hay estos items: " + items + "</p>");
+			//?
+			break;
 		default:
 			terminal_out("<p><strong>Error</strong>: "+command+" commando no encontrado</p>");
 	}
