@@ -121,7 +121,17 @@ function paseInstruction(instruction){
 	
 	switch(instruction[0]){
 		case"ver":
-		//llenar
+					let item_number = getItemNumber(instruction[1]);
+			
+			if (item_number < 0) {
+				console.log("Item errónea");
+				return;
+			}
+			
+			let item_description = game_data.items[item_number].description;
+			
+			terminalOut("<p><strong>" + instruction[1] + ":</strong> " + item_description + "</p>");
+		//?
 			break;
 		
 		case "ir":
@@ -147,6 +157,7 @@ function paseInstruction(instruction){
 			else{
 				current_room = room_num;
 			}
+			//? next room name
 			//getRoomNumber(HABITACIoN);
 			
 			break;
@@ -164,15 +175,15 @@ function paseInstruction(instruction){
 					game_data.rooms[current_room]items.splice(items_num,1);
 				
 					return;
+					//?
 				}
 			});
 		
 			break;
 		
-		case"ver":
-		terminal_out(game_data.items[instruction[1]].description);
+		
 		break;
-		deafult:
+		default:
 		terminal_out("<p><strong>ERROR</strong> escribe bien la instruction</p>");
 	}
 }
