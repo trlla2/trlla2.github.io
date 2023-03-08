@@ -37,7 +37,11 @@
 	"items":["boli"],
 	"doors":"secretaria"},
 	
-	{"id"}],
+	{"id":"cyber",
+	"name":"Clase de cyberseguridad",
+	"description":"En esta clase hacen palomitas",
+	"items":[],
+	"doors":"cyber"}],
 	
 	"items":[
 	
