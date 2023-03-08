@@ -17,31 +17,31 @@
 	"name":"Comedor de enti",
 	"description":"Donde se come coño",
 	"items":["lata"],
-	"doors":"comedor"},
+	"doors":["comedor"]},
 	
 	{"id":"WC",
 	"name":"lavabo",
 	"description":"donde pipi caca",
 	"items":["papelWC"],
-	"doors":"WC"},
+	"doors":["WC"]},
 	
 	{"id":"02",
 	"name":"clase 02",
 	"description":"La mejor clase",
 	"items":["boli", "funkoVaporeon",
-	"doors":"02"},
+	"doors":["02"]},
 	
 	{"id":"secretaria",
 	"name":"Sala de secretaria",
 	"description":"donde te dan los bolis para los examenes",
 	"items":["boli"],
-	"doors":"secretaria"},
+	"doors":["secretaria"]},
 	
 	{"id":"cyber",
 	"name":"Clase de cyberseguridad",
 	"description":"En esta clase hacen palomitas",
 	"items":[],
-	"doors":"cyber"}],
+	"doors":["cyber"]}],
 	
 	"items":[
 	
