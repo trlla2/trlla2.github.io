@@ -1,5 +1,6 @@
 {
 	"rooms":[
+	
 	{"id":"parking",
 	"name":"Parking de enti",
 	"description": "El parking que no puedes usar",
@@ -10,7 +11,7 @@
 	"name":"Portal de enti",
 	"description":"Portal donde todavia no han quitaddo la guarnicion de naviad",
 	"items":["boli"],
-	"doors":["principal", "WC", "secretaria", "comedor", "02"]},
+	"doors":["principal", "WC", "secretaria", "comedor", "02", "cyber"]},
 	
 	{"id":"launcher",
 	"name":"Comedor de enti",
@@ -28,9 +29,18 @@
 	"name":"clase 02",
 	"description":"La mejor clase",
 	"items":["boli", "funkoVaporeon",
-	"doors":"02"}],
+	"doors":"02"},
+	
+	{"id":"secretaria",
+	"name":"Sala de secretaria",
+	"description":"donde te dan los bolis para los examenes",
+	"items":["boli"],
+	"doors":"secretaria"},
+	
+	{"id"}],
 	
 	"items":[
+	
 	{"id":"piedra", 
 	"name":"predusco morgoso",
 	"description":"Es una piedra sucia",
@@ -43,7 +53,7 @@
 	
 	{"id":"boli",
 	"name":"boligrafo",
-	"description":"Son de secretaria, los alumnos normalmente se los piden a secretaria y se quedan en casa",
+	"description":"Son de secretaria, los alumnos normalmente se los piden a secretaria para hacer los examenes",
 	"pickeable":true},
 	
 	{"id":"lata",
@@ -64,10 +74,11 @@
 	"doors":[
 	{"id":"principal", "description":"Puerta de entrada de enti", "rooms":["parking","hall"]},
 	{"id":"salida","description":"La salvacion"},
-	{"id":"WC","desciption":"Puerta hacia el baÑo","rooms":["hall","WC"]},
-	{"id":"secretaria","desciption":"Puerta a secretaria",
-	{"id":"comedor","description":"puerta al comedor","rooms":["hall","launcher"],
-	{"id":"02","desciption":"Puerta hacia la clase","rooms":["hall","02"]
+	{"id":"WC","description":"Puerta hacia el baÑo","rooms":["hall","WC"]},
+	{"id":"secretaria","description":"Puerta a secretaria"},
+	{"id":"comedor","description":"puerta al comedor","rooms":["hall","launcher"]},
+	{"id":"02","description":"Puerta hacia la clase","rooms":["hall","02"]},
+	{"id":"cyber","description":"Puerta hacia la clase de cyber","rooms":["hall","cyber"]}}
 	
 	]
 }
