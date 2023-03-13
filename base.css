@@ -79,6 +79,20 @@ footer{
 	
 }
 
+textarea{
+	
+	width: 50%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: gray;	
+	resize: none;
+	
+	margin-left: 25%;
+}
+
 @media (max-widht:600px){
 main{
 flex-direction:column;
