@@ -1,18 +1,16 @@
 html{
 	font-family: 'Josefin Sans', sans-serif;
-	
 }
 
-body{
-	background-color: #000000;
-}
 
+header,h1,nav,main,article,aside,footer{
+padding:o;
+margin:0;
+border:1px solid black;
+}
 
 header{
 display:flex;
-background-color:#2F4F4F;
-border: 5px solid #000000;
-border-radius: 25px;
 }
 
 main{
@@ -20,17 +18,9 @@ display:flex;
 }
 
 h1{
-	color:#ffffff;
+
 }
-h2{
-	color:#ffffff;
-}
-h3{
-	color:#ffffff;
-}	
-p{
-	color:#ffffff;
-}
+
 nav{
 display:flex;
 }
@@ -41,9 +31,6 @@ article{
 
 aside{
 	flex-basis:25%;
-	background-color:#2F4F4F;
-	 border: 5px solid #000000;
-  border-radius: 25px;
 }
 
 footer{
