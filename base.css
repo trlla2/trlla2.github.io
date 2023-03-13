@@ -24,28 +24,40 @@ ul#menu{
   padding: 0;
   width: 200px;
 }
-
+a{
+	text-decoration: none;
+	color: #000;
+}
+a:hover{
+	text-decoration: underline;
+}
 li#menu a{
   display: block;
   color: #000;
-  padding: 8px 16px;
+  padding: 8px 10px;
   text-decoration: none;
 }
 li#menu a:hover {
   background-color: #555;
   color: white;	
 }
+img#piula{
+	margin-right:20px;
+	border-radius: 25px;
+}
+
+h1,h2,h3,p{
+	color:#ffffff;
+}
 h1{
-	color:#ffffff;
+	margin: auto;
+    width: 60%;
 }
-h2{
-	color:#ffffff;
+h2,h3,p{
+	text-align: center;
 }
-h3{
-	color:#ffffff;
-}	
-p{
-	color:#ffffff;
+img{
+	width:35%;
 }
 nav{
 display:flex;
