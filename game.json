@@ -28,7 +28,7 @@
 	{"id":"02",
 	"name":"clase 02",
 	"description":"La mejor clase",
-	"items":["boli", "funkoVaporeon",
+	"items":["boli", "funkoVaporeon"],
 	"doors":["02"]},
 	
 	{"id":"secretaria",
