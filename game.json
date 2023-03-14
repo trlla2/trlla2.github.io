@@ -82,7 +82,7 @@
 	{"id":"secretaria","description":"Puerta a secretaria"},
 	{"id":"comedor","description":"puerta al comedor","rooms":["hall","launcher"]},
 	{"id":"02","description":"Puerta hacia la clase","rooms":["hall","02"]},
-	{"id":"cyber","description":"Puerta hacia la clase de cyber","rooms":["hall","cyber"]}}
+	{"id":"cyber","description":"Puerta hacia la clase de cyber","rooms":["hall","cyber"]}
 	
 	]
 }
