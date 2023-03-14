@@ -6,12 +6,54 @@ let items_picked=[];
 
 let command = [];
 
+function game(data){
+	game_data = data;
+	
+	document.getElementById("terminal").innerHTML = "<p><strong>¡Bienbenidos a ENTIerrame! </strong>El juego de terror definitivo.</p>";
+	document.getElementById("terminal").innerHTML += "<p>Te enquentras en "+game_data.rooms[current_room].name+". ¿Que quieres hacer?</p>";
+	
+
+}
+
+fetch("https://trlla2.github.io/game.json").then(response => response.json()).then(data => game(data));
+
 function terminal_out(info){
 	let terminal = document.getElementById("terminal"); 
 	
 	terminal.innnerHTML += info;
 	
 	terminal.scrollTop = terminal.scrollHeight;
+}
+
+function parseCommand(command){
+      	console.log("comando", command);
+	switch (command){
+		case "ver":
+			terminal_out("<p>"+game_data.rooms[current_room].description+"</p>");
+			break;
+			
+		case "ir":
+			let doors = "";
+			let doors_num = game_data.rooms[current_room].doors.length;
+			for (let i = 0; i < doors_num;i++){
+				doors += game_data.rooms[current_room].doors[i]+", ";
+			}
+			terminal_out("<p>Puedes ir a: "+ doors +"</p>");
+			break;
+		case "coger":
+			
+			let items = "";
+			let items_num = game_data.rooms[current_room].items.length;
+			for(let i = 0; i < items_num; i++){
+				items += game_data.rooms[current_room].items[i] + " ";
+			}
+			
+			terminalOut("<p>En esta sala hay estos items: " + items + "</p>");
+			//?
+			break;
+		default:
+			terminal_out("<p><strong>Error</strong>: "+command+" commando no encontrado</p>");
+	}
 }
 
 function getDoorNumber(door){
@@ -43,76 +85,6 @@ function getItemNumber (item){
 	//?
 	
 	return -1;
-}
-
-function executeCommand () {
-	command = document.getElementById("commands").value.trim().split(" ");
-	document.getElementById("commands").value = "";
-	console.log(command);
-	
-	if (command.length == 0 || command == "") {
-		terminalOut("<p><strong>ERROR:</strong> Escribe una instrucción</p>");
-		return;
-	}
-	
-	if (command.length == 1) {
-		parseCommand(command[0]);
-	}
-	else {
-		parseInstruction(command);//?
-	}
-}
-
-/*
-function readAction(){
-	let command = document.getElementById("commands").value;
-	let instruction_trim= instruction.trim();
-	let data = command.trim().split(" ");
-	
-	if (data.lenght = 0 || instruction_trim == " ") {
-		document.getElementById("terminal").innerHTML += "<strong>ERROR</strong> Escribe un comando correcto";
-		return;
-	}
-	
-	if ( data.lenght == 1){
-		parseCommand(data[0]);
-	}
-	else
-		paseInstruction(data);
-	}
-	
-}
-*/
-
-function parseCommand(command){
-      	console.log("comando", command);
-	switch (command){
-		case "ver":
-			terminal_out("<p>"+game_data.rooms[current_room].description+"</p>");
-			break;
-			
-		case "ir":
-			let doors = "";
-			let doors_num = game_data.rooms[current_room].doors.length;
-			for (let i = 0; i < doors_num;i++){
-				doors += game_data.rooms[current_room].doors[i]+", ";
-			}
-			terminal_out("<p>Puedes ir a: "+ doors +"</p>");
-			break;
-		case "coger":
-			
-			let items = "";
-			let items_num = game_data.rooms[current_room].items.length;
-			for(let i = 0; i < items_num; i++){
-				items += game_data.rooms[current_room].items[i] + " ";
-			}
-			
-			terminalOut("<p>En esta sala hay estos items: " + items + "</p>");
-			//?
-			break;
-		default:
-			terminal_out("<p><strong>Error</strong>: "+command+" commando no encontrado</p>");
-	}
 }
 
 function paseInstruction(instruction){
@@ -188,14 +160,33 @@ function paseInstruction(instruction){
 	}
 }
 
-
-function game(data){
-	game_data = data;
+function readAction(){
+	let command = document.getElementById("commands").value;
+	let instruction_trim= instruction.trim();
+	let data = command.trim().split(" ");
 	
-	document.getElementById("terminal").innerHTML = "<p><strong>¡Bienbenidos a ENTIerrame! </strong>El juego de terror definitivo.</p>";
-	document.getElementById("terminal").innerHTML += "<p>Te enquentras en "+game_data.rooms[current_room].name+". ¿Que quieres hacer?</p>";
+	if (data.lenght = 0 || instruction_trim == " ") {
+		document.getElementById("terminal").innerHTML += "<strong>ERROR</strong> Escribe un comando correcto";
+		return;
+	}
 	
-	console.log(data.rooms[0].name);
+	if ( data.lenght == 1){
+		parseCommand(data[0]);
+	}
+	else
+		paseInstruction(data);
+	}
+	
 }
 
-fetch("https://rafaenti.github.io/game.json").then(response => response.json()).then(data => game(data));
+fetch("https://trlla2.github.io/game.json").then(response => response.json()).then(data => game(data));
+
+
+
+
+
+
+
+
+
+
