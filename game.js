@@ -20,7 +20,7 @@ fetch("https://trlla2.github.io/game.json").then(response => response.json()).th
 function terminal_out(info){
 	let terminal = document.getElementById("terminal"); 
 	
-	terminal.innnerHTML += info;
+	terminal.innerHTML += info;
 	
 	terminal.scrollTop = terminal.scrollHeight;
 }
@@ -48,7 +48,7 @@ function parseCommand(command){
 				items += game_data.rooms[current_room].items[i] + " ";
 			}
 			
-			terminalOut("<p>En esta sala hay estos items: " + items + "</p>");
+			terminal_out("<p>En esta sala hay estos items: " + items + "</p>");
 			//?
 			break;
 		default:
@@ -89,7 +89,7 @@ function getItemNumber (item){
 
 function paseInstruction(instruction){
 	
-	console.log("instruccion ", instruccion);
+	console.log("instruccion ", instruction);
 	
 	switch(instruction[0]){
 		case"ver":
@@ -102,7 +102,7 @@ function paseInstruction(instruction){
 			
 			let item_description = game_data.items[item_number].description;
 			
-			terminalOut("<p><strong>" + instruction[1] + ":</strong> " + item_description + "</p>");
+			terminal_out("<p><strong>" + instruction[1] + ":</strong> " + item_description + "</p>");
 		//?
 			break;
 		
@@ -135,6 +135,7 @@ function paseInstruction(instruction){
 			break;
 		
 		case"coger":
+		/*
 			game_data.rooms[current_room].items.forEach(function(item){
 				if (items == instruction[1]){
 					items_picked.push(item);
@@ -144,33 +145,34 @@ function paseInstruction(instruction){
 						return;
 					}
 				
-					game_data.rooms[current_room]items.splice(items_num,1);
+					game_data.rooms[current_room].items.splice(items_num,1);
 				
 					return;
 					//?
 				}
 			});
-		
+		*/
 			break;
 		
 		
-		break;
+		
 		default:
 		terminal_out("<p><strong>ERROR</strong> escribe bien la instruction</p>");
 	}
 }
 
 function readAction(){
-	let command = document.getElementById("commands").value;
+	let instruction = document.getElementById("commands").value;
 	let instruction_trim= instruction.trim();
-	let data = command.trim().split(" ");
 	
-	if (data.lenght = 0 || instruction_trim == " ") {
+	let data = instruction_trim.split(" ");
+	
+	if (data.length === 0 || instruction_trim == " ") {
 		document.getElementById("terminal").innerHTML += "<strong>ERROR</strong> Escribe un comando correcto";
 		return;
 	}
 	
-	if ( data.lenght == 1){
+	if ( data.length == 1){
 		parseCommand(data[0]);
 	}
 	else
@@ -180,13 +182,3 @@ function readAction(){
 }
 
 fetch("https://trlla2.github.io/game.json").then(response => response.json()).then(data => game(data));
-
-
-
-
-
-
-
-
-
-
