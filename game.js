@@ -175,9 +175,9 @@ function readAction(){
 	if ( data.length == 1){
 		parseCommand(data[0]);
 	}
-	else
-		paseInstruction(data);
-	}
+	
+	paseInstruction(data);
+	
 	
 }
 
