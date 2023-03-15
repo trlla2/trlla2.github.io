@@ -8,8 +8,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
 <script>
 function submit() {
-  alert("Esto es un ejercicio de clase, no se va a enviar");
-}
+   var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var message = document.getElementById("message").value;
+      var alertMessage = "Nombre: " + name + "\nCorreo electrónico: " + email + "\nMensaje: " + message + "\n\nEsto es un ejercicio de clase, no se va a enviar";
+      alert(alertMessage);
+    }
 </script>
 </head>
 <body>
@@ -29,7 +33,7 @@ function submit() {
 <main>
 <article>
 <h2>Fromulario de contacto</h2>
-<form method="POST">
+<form onsubmit="return false;">
 <p><label for="name">Nombre: </label><input type="text" name="name" id="name"/></p>
 <p><label for="name">Empresa: </label><input type="text" name="empresa" id="name"/></p>
 <p><label for="mail">e-mail: </label><input type="email" name="email" id="mail"/></p>
@@ -41,7 +45,7 @@ function submit() {
 <option value="mex">Mexico</option>
 </select></p>
 <textarea name="coment" id="comment" placeholdeR="Escribe aqui sobre el motivo del contacto"></textarea></p>	
-<p><input type="submit" onclick="function submit(); return false;">Enviar</input></p>
+<p><input type="submit" value="Enviar" onclick="function submit()"/></p>
 </form>
 </article>
 <aside>	
