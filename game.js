@@ -169,7 +169,19 @@ function paseInstruction(instruction){
 			
 			break;
 		case "inventario":
-			//?
+			let item_inventory =  findItemNumber(instruction[1]);
+			
+			if (item_inventory < 0) {
+				terminalOut("<p>el objeto no esta en tu inventario</p>");
+			return;
+			}
+			
+			
+			
+			let item_description =  game_data.items[item_inventory].description;
+			
+			terminal_out("<p>" + item_description + "</p>");
+			
 			break;
 		
 		
