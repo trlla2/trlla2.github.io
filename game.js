@@ -15,7 +15,7 @@ function game(data){
 
 }
 
-//fetch("https://trlla2.github.io/game.json").then(response => response.json()).then(data => game(data));
+
 
 function terminal_out(info){
 	let terminal = document.getElementById("terminal"); 
@@ -104,20 +104,20 @@ function paseInstruction(instruction){
 			let item_number = getItemNumber(instruction[1]);
 			
 			if (item_number < 0) {
-				terminal_out("Item erróneo");
+				terminal_out("<p>Item erróneo</p>");
 				return;
 			}
 			
 			let item_description = game_data.items[item_number].description;
 			
-			terminal_out("<p><strong>" + instruction[1] + ":</strong> " + item_description + "</p>");
+			terminal_out("<p>" + tem_description + "</p>");
 		//?
 			break;
 		
 		case "ir":
 			let door_num = getDoorNumber(instruction[1]);
 			if(door_num < 0){
-				terminal_out("Puerta erronia");
+				terminal_out("<p>Puerta erronia</p>");
 				return;
 			}
 			
@@ -140,6 +140,31 @@ function paseInstruction(instruction){
 			break;
 		
 		case"coger":
+			
+			game_data.rooms[current_room].items.forEach(function(item){
+				if (items == instruction[1]){
+					let item_num = game_data.rooms[current_room].items.indexOf(items);
+					if(item_num < 0){
+						console.log("Error al borrar el item de la habitacion");
+						return;
+					}
+					
+					if (game_data.items[item_num].pickable == false) {
+						terminalOut("<p>Este item no se puede recojer</p>");
+						return;
+					}
+					
+					if (item == instruction[1]){
+						items_picked.push(item);
+					}
+					
+					game_data.rooms[current_room].items.splice(items_num,1);
+					
+					terminal_out(item+" ha sido añadido al inventario");
+					return;
+					
+				}
+			});
 			
 			break;
 		case "inventario":
