@@ -82,7 +82,6 @@ function getItemNumber (item){
 			return i;
 		}
 	}
-	//?
 	
 	return -1;
 }
@@ -129,9 +128,6 @@ function paseInstruction(instruction){
 			else{
 				current_room = room_num;
 			}
-			//? next room name
-			//getRoomNumber(HABITACIoN);
-			
 			break;
 		
 		case"coger":
@@ -153,7 +149,9 @@ function paseInstruction(instruction){
 			});
 		*/
 			break;
-		
+		case "inventario":
+			
+			break;
 		
 		
 		default:
