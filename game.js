@@ -110,7 +110,7 @@ function paseInstruction(instruction){
 			
 			let item_description = game_data.items[item_number].description;
 			
-			terminal_out("<p>" + tem_description + "</p>");
+			terminal_out("<p>" + item_description + "</p>");
 		//?
 			break;
 		
@@ -121,15 +121,15 @@ function paseInstruction(instruction){
 				return;
 			}
 			
-			console.log("Door num: ", door_num);
+
 			
 			let room_num = getRoomNumber(game_data.doors[door_num].rooms[0]);
 			if(room_num < 0){
-				terminal_out("Habitacion erronea");
+				terminal_out("<p>Habitacion erronea</p>");
 				return;
 			}
 			
-			console.log("Room num: ", room_num);
+			
 			
 			if (room_num == current_room){
 				current_room = getRoomNumber(game_data.doors[door_num].rooms[1]);
@@ -137,6 +137,7 @@ function paseInstruction(instruction){
 			else{
 				current_room = room_num;
 			}
+			terminal_out("<p> Acabas de entrar en" + game_data.rooms[current_room].name+ +"</p>");
 			break;
 		
 		case"coger":
@@ -150,7 +151,7 @@ function paseInstruction(instruction){
 					}
 					
 					if (game_data.items[item_num].pickable == false) {
-						terminalOut("<p>Este item no se puede recojer</p>");
+						terminal_out("<p>Este item no se puede recojer</p>");
 						return;
 					}
 					
