@@ -137,7 +137,7 @@ function paseInstruction(instruction){
 			else{
 				current_room = room_num;
 			}
-			terminal_out("<p> Acabas de entrar en" + game_data.rooms[current_room].name+ +"</p>");
+			terminal_out("<p> Acabas de entrar en " + game_data.rooms[current_room].name+ +" </p>");
 			break;
 		
 		case"coger":
