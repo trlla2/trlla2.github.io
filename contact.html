@@ -11,8 +11,8 @@ function submit() {
    var name = document.getElementById("name").value;
       var email = document.getElementById("email").value;
       var message = document.getElementById("message").value;
-      var alertMessage = "Nombre: " + name + "\nCorreo electrónico: " + email + "\nMensaje: " + message + "\n\nEsto es un ejercicio de clase, no se va a enviar";
-      alert(alertMessage);
+      var alertM = "Nombre: " + name + "\nCorreo electrónico: " + email + "\nMensaje: " + message + "\n\nEsto es un ejercicio de clase, no se va a enviar";
+      alert(alertM);
     }
 </script>
 </head>
@@ -45,7 +45,7 @@ function submit() {
 <option value="mex">Mexico</option>
 </select></p>
 <textarea name="coment" id="comment" placeholdeR="Escribe aqui sobre el motivo del contacto"></textarea></p>	
-<p><input type="submit" value="Enviar" onclick="submit()"/></p>
+<p><input type="submit" value="Enviar" onclick="submit(); return false;"/></p>
 </form>
 </article>
 <aside>	
