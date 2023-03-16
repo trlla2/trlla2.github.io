@@ -15,7 +15,7 @@ function game(data){
 
 }
 
-fetch("https://trlla2.github.io/game.json").then(response => response.json()).then(data => game(data));
+//fetch("https://trlla2.github.io/game.json").then(response => response.json()).then(data => game(data));
 
 function terminal_out(info){
 	let terminal = document.getElementById("terminal"); 
@@ -101,10 +101,10 @@ function paseInstruction(instruction){
 	
 	switch(instruction[0]){
 		case"ver":
-					let item_number = getItemNumber(instruction[1]);
+			let item_number = getItemNumber(instruction[1]);
 			
 			if (item_number < 0) {
-				console.log("Item errónea");
+				terminal_out("Item erróneo");
 				return;
 			}
 			
@@ -117,7 +117,7 @@ function paseInstruction(instruction){
 		case "ir":
 			let door_num = getDoorNumber(instruction[1]);
 			if(door_num < 0){
-				console.log("Puerta erronia");
+				terminal_out("Puerta erronia");
 				return;
 			}
 			
@@ -125,7 +125,7 @@ function paseInstruction(instruction){
 			
 			let room_num = getRoomNumber(game_data.doors[door_num].rooms[0]);
 			if(room_num < 0){
-				console.log("Habitacion erronea");
+				terminal_out("Habitacion erronea");
 				return;
 			}
 			
@@ -140,23 +140,7 @@ function paseInstruction(instruction){
 			break;
 		
 		case"coger":
-		/*
-			game_data.rooms[current_room].items.forEach(function(item){
-				if (items == instruction[1]){
-					items_picked.push(item);
-					let item_num = game_data.rooms[current_room].items.indexOf(items);
-					if(item_num < 0){
-						console.log("Error al borrar el item de la habitacion");
-						return;
-					}
-				
-					game_data.rooms[current_room].items.splice(items_num,1);
-				
-					return;
-					//?
-				}
-			});
-		*/
+			
 			break;
 		case "inventario":
 			//?
