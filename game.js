@@ -45,11 +45,20 @@ function parseCommand(command){
 			let items = "";
 			let items_num = game_data.rooms[current_room].items.length;
 			for(let i = 0; i < items_num; i++){
-				items += game_data.rooms[current_room].items[i] + " ";
+				items += game_data.rooms[current_room].items[i] + ", ";
 			}
 			
 			terminal_out("<p>En esta sala hay estos items: " + items + "</p>");
-			//?
+		
+			break;
+		case "inventario":
+			let inventory_item = "";
+			let num_inventory_item = items_picked.length;
+			for(let i = 0; i < num_inventory_item; i++){
+				inventory_item += items_picked[i]+", "; 
+			}
+			
+			terminal_out("<p>Tienes estos items en el inventario: " + inventory_item + "</p>");
 			break;
 		default:
 			terminal_out("<p><strong>Error</strong>: "+command+" commando no encontrado</p>");
@@ -150,7 +159,7 @@ function paseInstruction(instruction){
 		*/
 			break;
 		case "inventario":
-			
+			//?
 			break;
 		
 		
