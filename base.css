@@ -90,6 +90,11 @@ footer{
 	
 }
 
+input{
+background-color: gray;	
+color: white;	
+}
+
 textarea{
 	
 	width: 50%;
