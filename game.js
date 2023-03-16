@@ -9,7 +9,7 @@ let command = [];
 function game(data){
 	game_data = data;
 	
-	document.getElementById("terminal").innerHTML = "<p><strong>¡Bienbenidos a ENTIerrame! </strong>El juego de terror definitivo.</p>";
+	document.getElementById("terminal").innerHTML = "<p><strong>¡Bienvenidos a ENTIerrame! </strong>El juego de terror definitivo.</p>";
 	document.getElementById("terminal").innerHTML += "<p>Te enquentras en "+game_data.rooms[current_room].name+". ¿Que quieres hacer?</p>";
 	
 
@@ -169,7 +169,7 @@ function paseInstruction(instruction){
 			
 			break;
 		case "inventario":
-			let item_inventory =  findItemNumber(instruction[1]);
+			let item_inventory =  getItemNumber(instruction[1]);
 			
 			if (item_inventory < 0) {
 				terminalOut("<p>el objeto no esta en tu inventario</p>");
@@ -178,9 +178,9 @@ function paseInstruction(instruction){
 			
 			
 			
-			let item_description =  game_data.items[item_inventory].description;
+			let invetory_item_description =  game_data.items[item_inventory].description;
 			
-			terminal_out("<p>" + item_description + "</p>");
+			terminal_out("<p>" + invetory_item_description + "</p>");
 			
 			break;
 		
