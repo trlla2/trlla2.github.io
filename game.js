@@ -45,7 +45,7 @@ function parseCommand(command){
 			let items = "";
 			let items_num = game_data.rooms[current_room].items.length;
 			for(let i = 0; i < items_num; i++){
-				items += game_data.rooms[current_room].items[i] + ", ";
+				items += game_data.rooms[current_room].items[i] + " ";
 			}
 			
 			terminal_out("<p>En esta sala hay estos items: " + items + "</p>");
@@ -141,7 +141,8 @@ function paseInstruction(instruction){
 			break;
 		
 		case"coger":
-			
+		
+			let items = "";
 			game_data.rooms[current_room].items.forEach(function(item){
 				if (items == instruction[1]){
 					let item_num = game_data.rooms[current_room].items.indexOf(items);
