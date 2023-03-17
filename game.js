@@ -52,6 +52,12 @@ function parseCommand(command){
 		
 			break;
 		case "inventario":
+		
+			if (items_picked.length == 0) {
+				terminal_out("<p>no tienes ningun item en el inventario</p>");
+				return;
+			} 
+			
 			let inventory_item = "";
 			let num_inventory_item = items_picked.length;
 			for(let i = 0; i < num_inventory_item; i++){
@@ -142,8 +148,8 @@ function paseInstruction(instruction){
 		
 		case"coger":
 		
-			let items = "";
-			game_data.rooms[current_room].items.forEach(function(item){
+			
+			game_data.rooms[current_room].items.forEach(function(items){
 				if (items == instruction[1]){
 					let item_num = game_data.rooms[current_room].items.indexOf(items);
 					if(item_num < 0){
@@ -151,18 +157,18 @@ function paseInstruction(instruction){
 						return;
 					}
 					
-					if (game_data.items[item_num].pickable == false) {
+				if (game_data.items[getItemNumber(items)].pickable == false) {
 						terminal_out("<p>Este item no se puede recojer</p>");
 						return;
 					}
 					
-					if (item == instruction[1]){
-						items_picked.push(item);
-					}
+					game_data.rooms[current_room].items.forEach(function(item) {
+						if (items == instruction[1]) {
+							items_picked.push(game_data.rooms[current_room].items.splice(item_num, 1));
+						}
+					});
 					
-					game_data.rooms[current_room].items.splice(items_num,1);
-					
-					terminal_out(item+" ha sido añadido al inventario");
+					terminal_out(items+" ha sido añadido al inventario");
 					return;
 					
 				}
@@ -173,7 +179,7 @@ function paseInstruction(instruction){
 			let item_inventory =  getItemNumber(instruction[1]);
 			
 			if (item_inventory < 0) {
-				terminalOut("<p>el objeto no esta en tu inventario</p>");
+				terminal_out("<p>el objeto no esta en tu inventario</p>");
 			return;
 			}
 			
